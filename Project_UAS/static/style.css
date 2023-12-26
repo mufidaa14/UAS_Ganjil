@@ -1,0 +1,103 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;    
+}
+nav {
+    background-color: slateblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 0 40px; 
+    height: 50px;  
+}
+.menu {
+    display: flex;
+}
+.menu li a{
+    padding: 10px 25px;
+}
+nav .logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+nav .logo a {
+    color: aliceblue;
+    text-decoration: none;
+}
+nav .menu li a{
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 200px;
+}
+nav .menu li {
+    list-style: none; 
+    padding: 10px;
+}
+nav .menu li:hover{
+    background-color: blueviolet;
+}
+nav .menu .jadwal {
+    display: none;
+}
+nav ul li:hover .jadwal {
+    display: block;
+    background-color: grey;
+    position: absolute;
+    margin-top: 12px;
+    padding: 5px;
+    border-radius: 4px;
+}
+.welcome {
+    margin-top: 170px;
+    max-width: 600px;
+    margin-left: 30px;
+    transition: 0.3s;
+}
+.welcome h1 {
+    background-image: linear-gradient(
+    to right,
+    black,
+    black 50%,
+    #9370DB 50%
+);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 40px;
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 5px 0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+}  
+.welcome h1:before {
+    content: '';
+    background: #54b3d6;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+}
+  
+.welcome h1:hover {
+   background-position: 0;
+}
+  
+a:hover::before {
+    width:100%;
+}
+.welcome h3 {
+    color: 	navy;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+}
+.welcome p {
+    margin: 10px 0 30px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 17px;    
+}
