@@ -92,12 +92,31 @@ a:hover::before {
     width:100%;
 }
 .welcome h3 {
-    color: 	navy;
+    color: 	black;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 20px;
+    font-size: 25px;
+    margin: 1px 0 10px;    
 }
 .welcome p {
-    margin: 10px 0 30px;
+    margin: 1px 0 70px;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 17px;    
+    font-size: 18px;    
+}
+footer {
+    margin-top: 200px;
+    padding: 10px 0;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+}
+.hari1 {
+    margin-top: 50px;
+    max-width: 600px;
+    margin-left: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.isi {
+    line-height: 3px;
+    text-align: center;
+    margin-top: 45px;
 }
