@@ -110,13 +110,50 @@ footer {
     text-align: center;
 }
 .hari1 {
-    margin-top: 50px;
+    margin-top: 40px;
     max-width: 600px;
     margin-left: 30px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-image: linear-gradient(
+      to right,
+      #9370DB,
+      #9370DB 50%,
+      #000 50%
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 5px 0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .hari1:before {
+    content: '';
+    background: black;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .hari1:hover {
+   background-position: 0;
+  }
+  
+  .hari1:hover::before {
+    width:100%;
 }
+
 .isi {
     line-height: 3px;
     text-align: center;
-    margin-top: 45px;
+    margin-top: 80px;
 }
+ 
