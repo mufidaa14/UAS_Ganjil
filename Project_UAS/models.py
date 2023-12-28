@@ -1,3 +1,23 @@
 from django.db import models
 
 # Create your models here.
+
+class jadwal_hari(models.Model):
+    makul = models.CharField(max_length=50)
+    keterangan = models.TextField()
+
+    def __str__(self):
+        return f"{self.makul}"
+    
+class absen(models.Model):
+    hari = models.ForeignKey(jadwal_hari, on_delete=models.CASCADE)
+    nama = models.CharField(max_length=50)
+    npm = models.CharField(max_length=50)
+    fakultas = models.CharField(max_length=20)
+    prodi = models.CharField(max_length=50)
+    
+    def __str__(self):
+        return f"{self.nama}"
+    
+
+   
