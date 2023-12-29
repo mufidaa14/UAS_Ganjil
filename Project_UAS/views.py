@@ -23,15 +23,15 @@ def kamis(request):
 def jumat(request):
     template = loader.get_template('jumat.html')
     return HttpResponse(template.render())
-# def profil(request):
-#     template = loader.get_template('profil.html')
-#     return HttpResponse(template.render())
+def profil(request):
+    template = loader.get_template('profil.html')
+    return HttpResponse(template.render())
 def contact(request):
     template = loader.get_template('contact.html')
     return HttpResponse(template.render())
-def profil(request):
+def data(request):
     data = absen.objects.all().values()
-    layout = loader.get_template('profil.html') 
+    layout = loader.get_template('data.html') 
     context = {
         'data': data
     }

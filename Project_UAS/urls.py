@@ -10,4 +10,5 @@ urlpatterns = [
     path("jumat/", views.jumat, name="jumat"),
     path("profil/", views.profil, name="profil"),
     path("contact/", views.contact, name="contact"),
+    path("data/", views.data, name="data"),
 ]

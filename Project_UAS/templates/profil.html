@@ -1,0 +1,39 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jadwal Matkul TIC22</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="">TI C22</a>
+        </div>
+        <ul class="menu">
+            <li><a href="{% url 'main' %}">Home</a></li>
+            <li><a href="{% url 'jadwal' %}">Jadwal</a><ul class="jadwal">
+                <li><a href="{% url 'senin' %}">Senin</a></li>
+                <li><a href="{% url 'selasa' %}">Selasa</a></li>
+                <li><a href="{% url 'kamis' %}">Kamis</a></li>
+                <li><a href="{% url 'jumat' %}">Jumat</a></li>
+            </ul></li>
+            <li><a href="#">Profil</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="welcome">
+        <h1>Selamat Datang</h1>
+        <h3><i>dikelas Teknik Informatika C22</i></h3>
+        <p>Mufidaa 14 </p>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <small>Copyright & copy; 2023 - mufida. All Rights Reserved.</small>
+        </div>
+    </footer>
+</body>
+</html>
