@@ -29,6 +29,22 @@
         <h3><i>dikelas Teknik Informatika C22</i></h3>
         <p>Mufidaa 14 </p>
     </div>
+    <table class="1">
+        <tr>
+            <td>Id</td>
+            <td>Nama</td>
+            <td>Prodi</td>
+            <td>NPM</td>
+        </tr>
+        {% for dt in data %}
+        <tr>
+            <td>{{dt.id}}</td>
+            <td><a href="data/{{dt.id}}">{{dt.nama}}</a></td>
+            <td>{{ dt.prodi }}</td>
+            <td>{{ dt.npm }}</td>
+        </tr>
+        {% endfor %}
+    </table>
     <footer>
         <div class="container">
             <small>Copyright & copy; 2023 - mufida. All Rights Reserved.</small>
