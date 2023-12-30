@@ -6,22 +6,50 @@
     <title>Data</title>
 </head>
 <body>
-    <table class="1">
+    <div class="container>">
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Mata Kuliah</th>
+                            <th>Nama</th>
+                            <th>NPM</th>
+                            <th>Fakultas</th>
+                            <th>Prodi</th>
+                            <th>Keterangan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for data in data %}
+                        <tr>
+                            <td><a href="{% url 'ubah_data' data.id %}">{{ data.hari }}</a> </td>
+                            <td>{{ data.nama }}</td>
+                            <td>{{ data.fakultas }}</td>
+                            <td>{{ data.prodi }}</td>
+                            <td>{{ data.keterangan }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- <table class="1">
         <tr>
             <td>Id</td>
             <td>Nama</td>
             <td>Prodi</td>
             <td>NPM</td>
         </tr>
-        {{ field.field }}
         {% for dt in data %}
         <tr>
             <td>{{dt.id}}</td>
             <td><a href="data/{{dt.id}}">{{dt.nama}}</a></td>
-            <td>{{ dt.Prodi }}</td>
-            <td>{{ dt.NPM }}</td>
+            <td>{{ dt.prodi }}</td>
+            <td>{{ dt.npm }}</td>
         </tr>
         {% endfor %}
-    </table>
+    </table> -->
 </body>
 </html>
