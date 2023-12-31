@@ -20,28 +20,32 @@
                 <li><a href="{% url 'kamis' %}">Kamis</a></li>
                 <li><a href="{% url 'jumat' %}">Jumat</a></li>
             </ul></li>
-            <li><a href="#">Profil</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="{% url 'profil' %}">Profil</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
         </ul>
     </nav>
     <div class="hari1">
         <h1><b>Hari Kamis</b></h1>
         <h3><b>Teknik Informatika C22</b></h3>
     </div>
-    <div class="container">
-        <div class="isi">
-            <img src="{%static 'img/physical-education.png' %}" width="8%">
-            <h3>FILSAFAT UMUM</h3>
-            <h4>Ibnu Ali, S.Pd.I, M.fil.I</h4>
-            <p>Ruang 1 TI</p>
-            <p>at 09:10 - 11:00</p>
-        </div>     
-        <div class="isi">
-               <img src="{%static 'img/mathematics.png' %}" width="8%">
-               <h3>MATEMATIKA KOMPUTASI III</h3>
-               <h4>Fathorrozi Ariyanto,M.Si</h4>
-               <p>Ruang 2 TI</p>
-               <p>at 11:00 - 12:30</p>     
+    <div class="row">
+        <div class="column">
+            <div class="isi">
+                <img src="{%static 'img/physical-education.png' %}" width="8%">
+                <h3>FILSAFAT UMUM</h3>
+                <h4>Ibnu Ali, S.Pd.I, M.fil.I</h4>
+                <p>Ruang 1 TI</p>
+                <p>at 09:10 - 11:00</p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="isi">
+                   <img src="{%static 'img/mathematics.png' %}" width="8%">
+                   <h3>MATEMATIKA KOMPUTASI III</h3>
+                   <h4>Fathorrozi Ariyanto,M.Si</h4>
+                   <p>Ruang 2 TI</p>
+                   <p>at 11:00 - 12:30</p>     
+            </div>
         </div>
     </div>
     <footer>

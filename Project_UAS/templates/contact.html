@@ -1,0 +1,66 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jadwal Matkul TIC22</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="">TI C22</a>
+        </div>
+        <ul class="menu">
+            <li><a href="{% url 'main' %}">Home</a></li>
+            <li><a href="{% url 'jadwal' %}">Jadwal</a><ul class="jadwal">
+                <li><a href="{% url 'senin' %}">Senin</a></li>
+                <li><a href="{% url 'selasa' %}">Selasa</a></li>
+                <li><a href="{% url 'kamis' %}">Kamis</a></li>
+                <li><a href="{% url 'jumat' %}">Jumat</a></li>
+            </ul></li>
+            <li><a href="{% url 'profil' %}">Profil</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="banner">
+        <img src="{%static 'img/user2.png' %}" width="20%">
+        <p>contact me</p>
+    </div>
+    <div class="medsos">
+        <div class="wrapper">
+            <div class="icon twitter">
+               <div class="tooltip">
+                  Telegram
+               </div>
+               <a href="https://t.me/mufidaa14" target="_blank"><span><i class="fab fa-telegram"></i></span></a>               
+            </div>
+            <div class="icon instagram">
+               <div class="tooltip">
+                  Instagram
+               </div>
+               <a href="https://www.instagram.com/mufidajeje14/" target="_blank"><span><i class="fab fa-instagram"></i></span></a>               
+            </div>
+            <div class="icon github">
+               <div class="tooltip">
+                  WhatsApp
+               </div>
+               <a href=" https://wa.me/082331270662" target="_blank"><span><i class="fab fa-whatsapp"></i></span></a>               
+            </div>
+            <div class="icon youtube">
+               <div class="tooltip">
+                  YouTube
+               </div>
+               <a href="https://www.youtube.com/channel/UCY8-sNvQ-UmqZVeVPszoAuQ" target="_blank"><span><i class="fab fa-youtube"></i></span></a>               
+            </div>
+        </div>  
+    </div>    
+    <footer class="media" id="sosial">
+        <div class="container">
+            <small>Copyright & copy; 2023 - mufida. All Rights Reserved.</small>
+        </div>
+    </footer>
+</body>
+</html>

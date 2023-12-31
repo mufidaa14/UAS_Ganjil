@@ -20,8 +20,8 @@
                 <li><a href="{% url 'kamis' %}">Kamis</a></li>
                 <li><a href="{% url 'jumat' %}">Jumat</a></li>
             </ul></li>
-            <li><a href="#">Profil</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="{% url 'profil' %}">Profil</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
         </ul>
     </nav>
     <div class="hari1">
@@ -29,12 +29,25 @@
         <h3><b>Teknik Informatika C22</b></h3>
     </div>
     <br>
-    <div class="isi">
-           <img src="{%static 'img/teacher.png' %}" width="8%">
-           <h3>WEB PROGRAMMING & PRACTICUM</h3>
-           <h4>Rofiuddin M.Kom</h4>
-           <p>LAB 1 TI</p>
-           <p>at 07:30 - 09:10</p>     
+    <div class="row">
+        <div class="column">
+            <div class="isi">
+                   <img src="{%static 'img/teacher.png' %}" width="8%">
+                   <h3>WEB PROGRAMMING & PRACTICUM</h3>
+                   <h4>Rofiuddin M.Kom</h4>
+                   <p>LAB 1 TI</p>
+                   <p>at 07:30 - 09:10</p>     
+            </div>
+        </div>
+        <div class="column">        
+            <div class="isi">
+                <img src="{%static 'img/bpk.png' %}" width="8%">
+                <h3>ARSITEKTUR & ORGANISASI KOMPUTER</h3>
+                <h4>Moh. Badri Tamam, M.Kom</h4>
+                <p>LAB 3 TI</p>
+                <p>at 12:30 - 14:00</p>     
+            </div>
+        </div>
     </div>
     <footer class="container">
         <div class="container">
