@@ -9,17 +9,14 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-                <h3>ubah: {{ data.hari }}</h3>
-                {%for message in messages%}
-                    {% if message %}
-                        <div class="alert alert-success">{{ message }}</div>
-                    {% endif%}
-                {% endfor %}
-                <form action="{% url 'ubah_data' data.id %}" method="post">
+                {% if pesan %}
+                    <div class="alert alert-success">{{ pesan }}</div>
+                {% endif %}
+                <form action="/menambah/" method="post">
                 {% csrf_token %}
                 <table>
                     <tr>
-                        <td>Hari         :</td>
+                        <td>Hari      :</td>
                         <td>{{ form.hari }}</td>
                     </tr>
                     <tr>
@@ -48,7 +45,6 @@
                     </tr>
                 </table>
                 <button>Tambah</button>
-                <a href="{% url 'data' %}">Kembali</a>
             </form>
             </div> 
         </div>

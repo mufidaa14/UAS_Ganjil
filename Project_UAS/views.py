@@ -1,8 +1,9 @@
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from django.template import loader
-from .models import jadwal_hari, absen
+from .models import absen
 from .forms import Formabsen
+from django.contrib import messages
 
 
 # Create your views here.
@@ -39,6 +40,7 @@ def ubah_data(request, id_data):
         form = Formabsen(request.POST,instance=data)
         if form.is_valid():
             form.save()
+            messages.success(request, "Data Berhasil diperbarui")
             return redirect('ubah_data', id_data=id_data)
     else:
         form = Formabsen(instance=data)
@@ -48,14 +50,14 @@ def ubah_data(request, id_data):
         }
     return render(request, template, context)
 def data(request):    
-    data = absen.objects.all().values()[:5]
+    datas = absen.objects.all().values()[:5]
     layout = loader.get_template('data.html') 
     context = {
-        'data': data
+        'datas': datas
     }
     return HttpResponse(layout.render(context))
 
-def ini_form(request):
+def menambah(request):
     if request.POST:
         form = Formabsen(request.POST)
         if form.is_valid():
@@ -67,11 +69,11 @@ def ini_form(request):
                 'form':form,
                 'pesan':pesan,
             }
-            return render (request, 'ini_form.html', context)
+            return render (request, 'menambah.html', context)
     else :
         form = Formabsen()
 
         context = {
             'form':form,
     }
-    return render(request, 'ini_form.html', context)
+    return render(request, 'menambah.html', context)

@@ -13,5 +13,5 @@ urlpatterns = [
     path("data/", views.data, name="data"),
     path("data/ubah/<int:id_data>", views.ubah_data, name="ubah_data"),
 
-    path("ini_form/", views.ini_form, name="ini_form"),    
+    path("menambah/", views.menambah, name="menambah"),    
 ]

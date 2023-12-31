@@ -12,22 +12,28 @@
                 <table class="table table-bordered table-striped">
                     <thead>
                         <tr>
+                            <th>Hari</th>
                             <th>Mata Kuliah</th>
                             <th>Nama</th>
                             <th>NPM</th>
                             <th>Fakultas</th>
                             <th>Prodi</th>
                             <th>Keterangan</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {% for data in data %}
+                        {% for data in datas %}
                         <tr>
                             <td><a href="{% url 'ubah_data' data.id %}">{{ data.hari }}</a> </td>
+                            <td>{{ data.makul }}</td>
                             <td>{{ data.nama }}</td>
                             <td>{{ data.fakultas }}</td>
                             <td>{{ data.prodi }}</td>
                             <td>{{ data.keterangan }}</td>
+                            <td>
+                                <a href=""></a>
+                            </td>
                         </tr>
                         {% endfor %}
                     </tbody>

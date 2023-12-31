@@ -8,7 +8,8 @@ class Formabsen(ModelForm):
         fields = '__all__'
 
         widgets = {
-            'hari' : forms.Select({'class' : 'form-control'}),
+            'hari' : forms.TextInput({'class' : 'form-control'}),
+            'makul' : forms.TextInput({'class' : 'form-control'}),
             'nama' : forms.TextInput({'class' : 'form-control'}),
             'npm' : forms.TextInput({'class' : 'form-control'}),
             'prodi' : forms.TextInput({'class' : 'form-control'}),
