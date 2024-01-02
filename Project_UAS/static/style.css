@@ -290,3 +290,91 @@ footer {
     color: #fff;
     text-align: center;
 }
+.absensi {
+  background-color: #fff;
+  width: 500px;
+  text-align: left;
+  padding-top: 40px;
+  margin-top: 100px;
+  margin-left: 500px;
+  margin-right: 50px;
+  font-size: 15px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.table-responsive{
+  line-height: 20px;
+}
+
+.table-rspn {
+  max-width: 900px;
+  border: 1px solid tomato;
+  background-color: white;
+  padding: 15px;
+  overflow: auto;
+  margin: auto;
+  border-radius: 4px;
+  
+}
+table {
+  width: 100px;
+  font-size: 14px;
+  color: #000;
+  white-space: nowrap;
+  border-collapse: collapse;
+}
+table>thead {
+  background-color: #9370DB;
+  color: aliceblue;
+}
+table>thead th {
+  padding: 15px;
+}
+table th, table td {
+  border: 1px solid black;
+  padding: 10px 10px;
+}
+.action-btn{
+  display: flex;
+  justify-content: center;
+  gap: 3px;
+}
+.action-btn>a {
+  text-decoration: none;
+  color: indianred;
+  background: #fff;
+  border: 1px solid #9370DB;
+  display: inline-block;
+  padding: 7px 17px;
+  font-weight: bold;
+  border-radius: 13px;
+  transition: 0.3s ease-in-out;
+
+}
+.action-btn>a:nth-child(1){
+  background: #46C1F6;
+  color: white;
+}
+.action-btn>a:nth-child(2){
+  background: tomato;
+  color: white;
+}
+.action-btn>a:hover{
+  box-shadow: 0 2px 8px black;
+}
+table>tbody>tr{
+  background-color: #fff;
+  transition: 0.3s ease-in-out;
+}
+table>tbody>tr:nth-child(even){
+  background-color: antiquewhite;
+}
+table>tbody>tr:hover{
+  filter: drop-shadow(0 4px 8px black);
+}
+.tbl th{
+  line-height: 5px;
+}
+button {
+  background: #DE463B;
+  border-radius: 7px;
+}

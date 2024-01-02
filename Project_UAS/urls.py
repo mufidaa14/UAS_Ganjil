@@ -12,6 +12,6 @@ urlpatterns = [
     path("contact/", views.contact, name="contact"),
     path("data/", views.data, name="data"),
     path("data/ubah/<int:id_data>", views.ubah_data, name="ubah_data"),
+    path('data/hapus/<int:id_data>', views.hapus_data, name="hapus_data"),
 
-    path("menambah/", views.menambah, name="menambah"),    
 ]

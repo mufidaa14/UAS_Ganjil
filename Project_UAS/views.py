@@ -50,14 +50,14 @@ def ubah_data(request, id_data):
         }
     return render(request, template, context)
 def data(request):    
-    datas = absen.objects.all().values()[:5]
+    datas = absen.objects.all().values()
     layout = loader.get_template('data.html') 
     context = {
         'datas': datas
     }
     return HttpResponse(layout.render(context))
 
-def menambah(request):
+def profil(request):
     if request.POST:
         form = Formabsen(request.POST)
         if form.is_valid():
@@ -69,11 +69,17 @@ def menambah(request):
                 'form':form,
                 'pesan':pesan,
             }
-            return render (request, 'menambah.html', context)
+            return render (request, 'profil.html', context)
     else :
         form = Formabsen()
 
         context = {
             'form':form,
     }
-    return render(request, 'menambah.html', context)
+    return render(request, 'profil.html', context)
+
+def hapus_data(request, id_data):
+    data = absen.objects.filter(id=id_data)
+    data.delete()
+
+    return redirect('data')

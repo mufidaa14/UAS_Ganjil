@@ -24,10 +24,50 @@
             <li><a href="{% url 'contact' %}">Contact</a></li>
         </ul>
     </nav>
-    <div class="welcome">
-        <h1>Selamat Datang</h1>
-        <h3><i>dikelas Teknik Informatika C22</i></h3>
-        <p>Mufidaa 14 </p>
+    <div class="absensi">
+        <div class="table-responsive">
+            <table class="tbl">
+                {% if pesan %}
+                    <div class="alert alert-success">{{ pesan }}</div>
+                {% endif %}
+                <form action="/profil/" method="post">
+                {% csrf_token %}
+                <p>TABLE ABSENSI</p>
+                <tr>
+                    <td>Hari      :</td>
+                    <td>{{ form.hari }}</td>
+                </tr>
+                <tr>
+                    <td>Mata Kuliah :</td>
+                    <td>{{ form.makul }}</td>
+                </tr>
+                <tr>
+                    <td>Nama        :</td>
+                    <td>{{ form.nama }}</td>                
+                </tr>
+                <tr>
+                    <td>NPM         :</td>
+                    <td>{{ form.npm }}</td>                
+                </tr>
+                <tr>
+                    <td>Fakultas     :</td>
+                    <td>{{ form.fakultas }}</td>                
+                </tr>
+                <tr>
+                    <td>Prodi        :</td>
+                    <td>{{ form.prodi }}</td>                
+                </tr>
+                <tr>
+                    <td>Keterangan    :</td>
+                    <td>{{ form.keterangan }}</td>                
+                </tr>
+                <td>
+                    <span class="action-btn"> 
+                        <button>Tambah</button>
+                    </span>
+            </table>
+    </form>
+        </div>
     </div>
     
     <footer>
