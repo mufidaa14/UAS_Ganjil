@@ -294,7 +294,7 @@ footer {
   background-color: #fff;
   width: 500px;
   text-align: left;
-  padding-top: 40px;
+  padding-top: 10px;
   margin-top: 100px;
   margin-left: 500px;
   margin-right: 50px;
@@ -377,4 +377,9 @@ table>tbody>tr:hover{
 button {
   background: #DE463B;
   border-radius: 7px;
+}
+.bas {
+  line-height: 3px;
+  text-align: center;
+  margin-top: 80px;
 }
