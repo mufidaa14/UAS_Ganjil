@@ -33,11 +33,11 @@
         <div class="table-responsive">
             <table class="tbl">
                 {% if pesan %}
-                    <div class="alert alert-success">{{ pesan }}</div>
+                    <div class="alert alert-success"><b>{{ pesan }}</b></div>
                 {% endif %}
                 <form action="/profil/" method="post">
                 {% csrf_token %}
-                <p>TABLE ABSENSI</p>
+                <p>TABEL ABSENSI</p>
                 <tr>
                     <td>Hari      :</td>
                     <td>{{ form.hari }}</td>

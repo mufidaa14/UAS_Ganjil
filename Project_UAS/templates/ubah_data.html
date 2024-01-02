@@ -10,7 +10,7 @@
         <h2>ubah: {{ data.hari }}</h2>
         {%for message in messages%}
             {% if message %}
-                <div class="alert alert-success">{{ message }}</div>
+                <div class="alert alert-success"><b>{{ message }}</b></div>
             {% endif%}
         {% endfor %}
         <form action="{% url 'ubah_data' data.id %}" method="post">

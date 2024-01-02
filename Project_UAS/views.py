@@ -40,7 +40,7 @@ def ubah_data(request, id_data):
         form = Formabsen(request.POST,instance=data)
         if form.is_valid():
             form.save()
-            messages.success(request, "Data Berhasil diperbarui")
+            messages.success(request, "Data Berhasil diperbarui !")
             return redirect('ubah_data', id_data=id_data)
     else:
         form = Formabsen(instance=data)
@@ -63,7 +63,7 @@ def profil(request):
         if form.is_valid():
             form.save()
             form = Formabsen()
-            pesan = "Data berhasil disimpan"
+            pesan = "Data berhasil disimpan !"
 
             context = {
                 'form':form,
